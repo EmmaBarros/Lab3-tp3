@@ -18,9 +18,10 @@ public class PagoEfectivo extends Pago {
     }
     
     @Override
-    public void procesar(){
-        Consola.emitirMensajeLN("se realizo con exito el pago en efectivo del monto de  $ ="+monto);
-   }
+    public boolean procesar(){
+        Consola.emitirMensajeLN("se realizo con exito el pago en efectivo del monto de  $ ="+monto );
+        return true;
+    }
 
     @Override
     public String toString() {
@@ -28,7 +29,7 @@ public class PagoEfectivo extends Pago {
     }
 
     @Override
-    public void mostrarComprobante() {
+    public void mostrarComprobante(Persona cliente) {
         
     }
     

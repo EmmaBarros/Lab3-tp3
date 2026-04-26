@@ -35,7 +35,7 @@ public abstract class Pago implements Icomprobante {
         return m >= 0;
     }
     
-    public abstract void procesar();   
+    public abstract boolean procesar();   
 
     @Override
     public String toString() {
