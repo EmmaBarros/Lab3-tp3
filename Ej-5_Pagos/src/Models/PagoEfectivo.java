@@ -19,8 +19,9 @@ public class PagoEfectivo extends Pago {
     
     @Override
     public boolean procesar(){
-        Consola.emitirMensajeLN("se realizo con exito el pago en efectivo del monto de  $ ="+monto );
-        return true;
+            Consola.emitirMensajeLN("Pago en efectvo realizado con exito del monto de: $"+super.monto);
+            return true;
+       
     }
 
     @Override

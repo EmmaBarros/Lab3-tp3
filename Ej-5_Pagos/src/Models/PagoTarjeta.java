@@ -40,7 +40,13 @@ public class PagoTarjeta extends Pago {
      
    @Override
    public boolean procesar(){
-       return true;
+      if(this.monto <= saldoDisp){
+          Consola.emitirMensajeLN("Pago con Tarjeta Realizado Exitosamente ...");
+          return true;
+      }else{
+          Consola.emitirMensajeLN("Error Saldo insuficiente");
+          return false;
+      }
    }
 
     @Override

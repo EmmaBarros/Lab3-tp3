@@ -35,7 +35,21 @@ public abstract class Pago implements Icomprobante {
         return m >= 0;
     }
     
-    public abstract boolean procesar();   
+    public abstract void mostrarInfo();
+    public abstract boolean procesar(); 
+    
+    
+    @Override 
+    public void mostrarComprobante(Persona cliente){
+        Consola.emitirMensajeLN("------Comprobante de Pago------");
+        Consola.emitirMensajeLN("Cliente :"+cliente.getNom()+"-"+cliente.getApe());
+        Consola.emitirMensajeLN("DNI :"+cliente.getDni());
+        Consola.emitirMensajeLN("------------------------");
+        Consola.emitirMensajeLN("DETALLE de operacion");
+        this.mostrarInfo();
+        Consola.emitirMensajeLN("Monto Total : $"+this.monto);
+        Consola.emitirMensajeLN("-------------------------------");
+    }
 
     @Override
     public String toString() {
