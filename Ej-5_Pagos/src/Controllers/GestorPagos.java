@@ -93,7 +93,7 @@ public class GestorPagos {
         Consola.emitirMensajeLN("========================================");
         Consola.emitirMensajeLN("TOTAL RECAUDADO: $" + recaudacionTot);
         Consola.emitirMensajeLN("Cerrando sistema...");
-        Consola.emitirMensajeLN("========================================\n");
+        Consola.emitirMensajeLN("========================================");
     } 
     
 }

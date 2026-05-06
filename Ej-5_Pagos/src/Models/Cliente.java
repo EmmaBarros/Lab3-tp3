@@ -11,7 +11,7 @@ public class Cliente extends Persona {
     private double saldo;
    
 
-    public Cliente(int idCliente, String nom, String ape, String dni) {
+    public Cliente(int idCliente, String nom, String ape, int dni) {
         super(nom, ape, dni);
          contadorId ++;
         this.idCliente = contadorId;
