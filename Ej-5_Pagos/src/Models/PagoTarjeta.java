@@ -6,17 +6,17 @@ import Consola.Consola;
  * @author emami
  */
 public class PagoTarjeta extends Pago {
-    private double saldoDisp;
+    private Cliente clienteAsociado;
     private int nroTarjeta;
     
-    public PagoTarjeta(double monto) {
-        super(monto);
+   
+
+    public PagoTarjeta(Cliente clAct) {
+        super();
+        this.clienteAsociado = clAct;
     }
 
-    public PagoTarjeta() {
-        super();
-    }
-    
+ 
     public void cargarDatos(){
         super.cargarDatos();
         ingresarNro();
@@ -40,7 +40,7 @@ public class PagoTarjeta extends Pago {
      
    @Override
    public boolean procesar(){
-      if(this.monto <= saldoDisp){
+      if(this.monto <= clienteAsociado.getSaldo()){
           Consola.emitirMensajeLN("Pago con Tarjeta Realizado Exitosamente ...");
           return true;
       }else{
@@ -56,7 +56,9 @@ public class PagoTarjeta extends Pago {
 
     @Override
     public void mostrarComprobante(Persona cliente) {
-        
+        super.mostrarComprobante(cliente);
+        Consola.emitirMensajeLN("Nro Tarjeta : "+this.nroTarjeta);
+        Consola.emitirMensajeLN("Pago aprobado");
     }
 
     public int getNroTarjeta() {
@@ -65,6 +67,11 @@ public class PagoTarjeta extends Pago {
 
     private void setNroTarjeta(int nroTarjeta) {
         this.nroTarjeta = nroTarjeta;
+    }
+
+    @Override
+    public void mostrarInfo() {
+       this.toString();
     }
     
    

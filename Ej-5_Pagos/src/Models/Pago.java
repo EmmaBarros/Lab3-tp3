@@ -53,7 +53,7 @@ public abstract class Pago implements Icomprobante {
 
     @Override
     public String toString() {
-        return "Monto : "+monto;
+        return "Monto : $"+monto;
     }
 
     public double getMonto() {

@@ -31,7 +31,14 @@ public class PagoEfectivo extends Pago {
 
     @Override
     public void mostrarComprobante(Persona cliente) {
-        
+     super.mostrarComprobante(cliente);
+     this.toString();
+     Consola.emitirMensajeLN("Pago en EFECTIVO APROBADO");
+    }
+
+    @Override
+    public void mostrarInfo() {
+        this.toString();
     }
     
     
