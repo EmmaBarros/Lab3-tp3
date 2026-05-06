@@ -63,6 +63,7 @@ public class Persona {
     private boolean validarInt(int x){
         return x >= 0;
     }  
+
     
     public String getNom() {
         return nom;
