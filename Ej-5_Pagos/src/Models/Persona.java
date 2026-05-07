@@ -8,9 +8,9 @@ import Consola.Consola;
 public class Persona {
  private String nom;
  private String ape;
- private String  dni;
+ private int  dni;
 
-    public Persona(String nom, String ape, String dni) {
+    public Persona(String nom, String ape, int dni) {
         this.nom = nom;
         this.ape = ape;
         this.dni = dni;
@@ -46,21 +46,23 @@ public class Persona {
         setApe(a);
     }
     private void ingresarDni(){
-        String d;
+        int d;
         do {
             Consola.emitirMensaje("DNI: ");
-            d = Consola.leerDato();
-            if (!validarString(d)) {
+            d = Consola.leerInt();
+            if (!validarInt(d)) {
                 Consola.emitirMensajeLN("Carga invlida , ingerese un Dni");
             }
-        } while (!validarString(d));
+        } while (!validarInt(d));
         setDni(d);
     }
         
     private boolean validarString(String n){
          return  n != null && !n.trim().isEmpty() ;
     }    
-        
+  private boolean validarInt(int x){
+      return x > 0;
+  }      
     
     public String getNom() {
         return nom;
@@ -78,11 +80,11 @@ public class Persona {
         this.ape = ape;
     }
 
-    public String getDni() {
+    public int getDni() {
         return dni;
     }
 
-    private void setDni(String dni) {
+    private void setDni(int dni) {
         this.dni = dni;
     }
  
