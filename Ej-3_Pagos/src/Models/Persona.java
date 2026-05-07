@@ -59,18 +59,12 @@ public class Persona {
         
     private boolean validarString(String n){
          return  n != null && !n.trim().isEmpty() ;
-    }    
-<<<<<<< HEAD:Ej-5_Pagos/src/Models/Persona.java
+    }   
+    
   private boolean validarInt(int x){
       return x > 0;
   }      
-=======
-    private boolean validarInt(int x){
-        return x >= 0;
-    }  
-
->>>>>>> ff818b14339f36bad1558d2771095620c33f34b0:Ej-3_Pagos/src/Models/Persona.java
-    
+  
     public String getNom() {
         return nom;
     }
