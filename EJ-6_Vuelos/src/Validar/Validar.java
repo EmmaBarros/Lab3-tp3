@@ -13,6 +13,10 @@ public class Validar {
     public static boolean validarInt(int valor) {
         return valor > 0;
     }
+    
+    public static boolean ValidarIntRang(int valor,int min,int max){
+        return valor > 0 && valor > min && valor < max;
+    }
 
     /**
      * Valida que un número decimal sea mayor a cero.
@@ -20,6 +24,9 @@ public class Validar {
      */
     public static boolean validarDouble(double valor) {
         return valor > 0;
+    }
+    public static boolean ValidarDoubleRang(double valor,double min,double max){
+        return valor > 0 && valor > min && valor < max;
     }
 
     /**
